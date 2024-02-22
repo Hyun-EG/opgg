@@ -1,0 +1,696 @@
+/* common */
+* {
+  scroll-padding-top: 80px;
+}
+body {
+  background-color: #5383e8;
+}
+.hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+label {
+  cursor: pointer;
+}
+select {
+  appearance: none;
+  background: #fff;
+  border: none;
+  vertical-align: middle;
+  border-radius: 0;
+}
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+}
+option {
+  font-weight: normal;
+  display: block;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+  white-space: nowrap;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+img {
+  border: 0;
+  vertical-align: center;
+  max-width: 100%;
+}
+a {
+  cursor: pointer;
+}
+/* header */
+header {
+  display: block;
+}
+header .headerMenu {
+  min-width: 1080px;
+}
+header .headerMenu .firstLine {
+  position: relative;
+  height: 40px;
+  padding-left: 98px;
+  background-color: #28344e;
+  display: flex;
+  align-items: center;
+}
+header .headerMenu .firstLine .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 98px;
+  height: 40px;
+  background-color: #5383e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .headerMenu .firstLine nav {
+  flex: 1;
+}
+header .headerMenu .firstLine nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: 40px;
+  width: 1550px;
+}
+header .headerMenu .firstLine nav ul li {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+header .headerMenu .firstLine nav ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c3cbd1;
+  height: 32px;
+  line-height: 32px;
+  margin: 4px;
+  padding: 0 8px;
+  text-decoration: none;
+}
+header .headerMenu .firstLine nav ul li a:hover {
+  background-color: #2f436e;
+  border-radius: 7px;
+}
+header .headerMenu .firstLine nav ul li > a > span {
+  margin-left: 8px;
+  font-size: 12px;
+}
+header .headerMenu .firstLine nav ul li > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .headerMenu .firstLine nav ul li > span > span {
+  margin-left: 8px;
+  font-size: 12px;
+}
+header .headerMenu .firstLine nav ul li:first-child {
+  padding: 0 12px 0 0;
+  background-color: #5383e8;
+}
+header .headerMenu .firstLine nav ul li:first-child > span {
+  color: #fff;
+}
+.palWorld {
+  display: block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  border-radius: 50%;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ffb900;
+  color: #28344e;
+}
+header .headerMenu .rightMenu {
+  width: 200px;
+}
+header .headerMenu .rightMenu .ghost {
+  width: 24px;
+  height: 24px;
+  background-image: url(https://s-lol-web.op.gg/images/icon/chatbot.gif);
+  background-size: cover;
+  padding: 0;
+  border: none;
+}
+header .headerMenu .rightMenu .brightNess {
+  width: 24px;
+  height: 24px;
+  background: url(https://s-lol-web.op.gg/images/icon/icon-lightmode.svg);
+}
+header .headerMenu .rightMenu .language {
+  width: 24px;
+  height: 24px;
+  background: url(https://s-lol-web.op.gg/images/icon/icon-world-light-blue.svg?v=1707283412529);
+}
+header .headerMenu .loginMenu {
+  width: 100px;
+}
+header .headerMenu .loginMenu .login {
+}
+header .headerMenu .loginMenu .login > a {
+  display: block;
+  padding: 4px 16px;
+  line-height: 18px;
+  font-size: 12px;
+  background-color: #5383e8;
+  color: #fff;
+  border-radius: 4px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+header .headerMenu .secondLine {
+  border-bottom: 1px solid #4171d6;
+  background-color: 1px solid #5383e8;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 49px;
+}
+header .headerMenu .secondLine .routeMenu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1080px;
+}
+header .headerMenu .secondLine .routeMenu .routeList {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem {
+  margin-left: 24px;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem:hover {
+  color: white;
+  border-bottom: 3px solid #fff;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem a {
+  text-decoration: none;
+}
+
+header .headerMenu .secondLine .routeMenu .routeList .routeItem:first-child {
+  margin-left: 0;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem .home {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-bottom: 3px solid #fff;
+  font-size: 15px;
+  box-sizing: border-box;
+  line-height: 22px;
+  padding: 10px 0 9px;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem .champion {
+  display: flex;
+  align-items: center;
+  color: #b3cdff;
+  font-size: 15px;
+  border-bottom: 3px solid transparent;
+  box-sizing: border-box;
+  line-height: 22px;
+  padding: 10px 0 9px;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem .gameMode {
+  display: flex;
+  align-items: center;
+  color: #00fede;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  box-sizing: border-box;
+  line-height: 22px;
+  padding: 10px 0 9px;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem .urf {
+  display: flex;
+  align-items: center;
+  color: #b3cdff;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  box-sizing: border-box;
+  line-height: 22px;
+  padding: 10px 0 9px;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem .urf .urfTag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  color: #fff;
+  background: #ffb900;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem .statistics {
+  display: flex;
+  align-items: center;
+  color: #b3cdff;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  box-sizing: border-box;
+  line-height: 22px;
+  padding: 10px 0 9px;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem .lanking {
+  display: flex;
+  align-items: center;
+  color: #b3cdff;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  box-sizing: border-box;
+  line-height: 22px;
+  padding: 10px 0 9px;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem .pro {
+  display: flex;
+  align-items: center;
+  color: #b3cdff;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  box-sizing: border-box;
+  line-height: 22px;
+  padding: 10px 0 9px;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem .multiSearch {
+  display: flex;
+  align-items: center;
+  color: #b3cdff;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  box-sizing: border-box;
+  line-height: 22px;
+  padding: 10px 0 9px;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem .talk {
+  display: flex;
+  align-items: center;
+  color: #b3cdff;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  box-sizing: border-box;
+  line-height: 22px;
+  padding: 10px 0 9px;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem .edu {
+  display: flex;
+  align-items: center;
+  color: #b3cdff;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  box-sizing: border-box;
+  line-height: 22px;
+  padding: 10px 0 9px;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem .myPage {
+  display: flex;
+  align-items: center;
+  color: #b3cdff;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  box-sizing: border-box;
+  line-height: 22px;
+  padding: 10px 0 9px;
+  gap: 8px;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem .icon {
+  background-color: red;
+  border: #4171d6;
+  right: 0;
+}
+header .banner {
+}
+header .banner .thirdLine {
+  display: block;
+  width: 100%;
+  color: #202d37;
+  background: #ffb900;
+}
+header .banner .thirdLine > a {
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  box-sizing: border-box;
+  width: 1080px;
+  font-size: 14px;
+  min-height: 40px;
+  line-height: 40px;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+}
+header .banner .thirdLine > a:hover {
+  text-decoration: underline;
+}
+header .main {
+  display: block;
+  width: 1080px;
+  margin: 0 auto;
+}
+header .main .smallder {
+  margin: 56px 0 46px;
+}
+header .main .smallder img {
+  display: block;
+  max-height: 224px;
+  margin: 0 auto;
+}
+header .main .middle {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+header .main .middle div:first-of-type {
+  position: relative;
+}
+header .main .middle .searchBox {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #fff;
+  border-radius: 30px;
+  height: 60px;
+  text-align: left;
+}
+header .main .middle .searchBox div {
+  position: relative;
+  height: 40px;
+}
+header .main .middle .searchBox div:first-of-type {
+  padding-left: 32px;
+  padding-right: 8px;
+  margin-right: 16px;
+}
+header .main .middle .searchBox div small,
+header .main .middle .searchBox div .label {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  color: #202d37;
+  font-style: normal;
+}
+header .main .middle .searchBox .label {
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+header .main .middle .searchBox .pickArea {
+  font-size: 12px;
+  line-height: 16px;
+  position: absolute;
+  visibility: hidden;
+  display: block;
+  width: 194px;
+}
+header .main .middle .searchBox .pickArea::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #9aa4af;
+  margin-top: -2.5px;
+}
+header .main .middle .searchBox .pickKr {
+  position: relative;
+  display: block;
+  width: 194px;
+}
+header .main .middle .searchBox .pickKr .korea {
+  padding: 0;
+  height: auto;
+  color: #9aa4af;
+  width: 100%;
+  border: 0 none;
+}
+header .main .middle .searchBox .pickKr .korea::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  margin-top: -2.5px;
+  border-top-color: #9aa4af;
+}
+header .main .middle .searchBox > div:first-of-type::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -7px;
+  width: 1px;
+  height: 14px;
+  background: #ebeef1;
+}
+header .main .middle .searchBox > div {
+  position: relative;
+  height: 40px;
+}
+header .main .middle .searchBox .searchWrapper {
+  flex: 1;
+}
+header .main .middle .searchBox .searchWrapper label + input {
+  background: #fff;
+  position: relative;
+  border: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 20px;
+  color: #202d37;
+}
+header .main .middle .searchBox .searchWrapper .searchPlaceholder {
+  font-size: 14px;
+  height: 20px;
+  left: 0;
+  bottom: 0;
+  color: #9aa4af;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: inherit;
+  z-index: 1;
+  line-height: 16px;
+}
+header
+  .main
+  .middle
+  .searchBox
+  .searchWrapper
+  .searchPlaceholder
+  .placeHoderTag {
+  font-weight: 500;
+  border-radius: 3px;
+  background-color: #f7f7f9;
+}
+header .main .middle .searchBox button[type="submit"] {
+  background-image: url(https://s-lol-web.op.gg/images/icon/icon-gg.svg);
+  background-repeat: no-repeat;
+  background-size: 42px;
+  background-position: center;
+  width: 90px;
+  height: 60px;
+  font-size: 0;
+}
+header .main .middle .middleSecond {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  position: relative;
+}
+header .main .middle .middleSecond .middleSecondBanner {
+  width: 600px;
+  margin: 0 auto;
+  background: grey;
+  border-radius: 10px;
+  background-image: url(./fastcampus.PNG);
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+header .main .middleThird {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  position: relative;
+  background-color: red;
+}
+header .middleThird .middleThirdBanner {
+  width: 1080px;
+  height: 270px;
+  border-radius: 10px;
+  margin: 25px auto;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 90px;
+  font-weight: 700;
+}
+header .middleTable {
+  display: flex;
+  width: 1080px;
+  margin: 36px auto 0px;
+  box-sizing: border-box;
+}
+header .middleTable > :first-of-type {
+  flex-basis: 536px;
+  margin-right: 8px;
+}
+header .middleTable > section {
+  background-color: white;
+  border-radius: 4px;
+  min-height: 405px;
+}
+header .middleTable .opggTalk {
+  width: 100%;
+}
+header .middleTable .opggTalk h2 a {
+  display: block;
+  padding: 17px 0px 16px 20px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  line-height: 17px;
+  font-size: 14px;
+}
+header .middleTable .opggTalk .opggTalkTopic {
+  padding-bottom: 13px;
+  display: flex;
+  flex-flow: column;
+}
+/* header .middleTable .opggTalk .opggTalkTopic > article {
+  display: flex;
+  margin: 0px 12px;
+  border-color: grey;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100px;
+  flex-basis: 55px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+} */
+header .middleTable .playerTab {
+  max-width: 536px;
+  flex-grow: 1;
+}
+header footer {
+  min-width: 1080px;
+  margin-top: 48px;
+  padding: 48px 0;
+  background: transparent;
+}
+header footer > div {
+  width: 1080px;
+  margin: 0 auto;
+}
+header footer > div section {
+}
+header footer > div section .footerLogo {
+  margin-left: 0;
+  flex-grow: 1;
+}
+header footer > div section .footerLogo a {
+  font-size: 14px;
+}
+header footer > div section div {
+  flex-basis: 170px;
+  margin-left: 12px;
+}
+header footer > div section div .aTitle {
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  padding-bottom: 16px;
+}
+header footer > div section div a {
+  display: inline-block;
+  width: 100%;
+  line-height: 24px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+header footer .footerBottom {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #dbe0e4;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+}
+header footer .footerBottom .footerBottonFirst {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+header footer .footerBottom .footerBottonFirst .company {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+  margin: 0;
+  padding: 0;
+}
+header footer .footerBottom .footerBottonFirst .company > li {
+  position: relative;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+header footer .footerBottom .footerBottonFirst .company > li::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  background: #81acff;
+}
+header footer .footerBottom .footerBottonFirst .copyright {
+  font-size: 11px;
+  font-weight: 500;
+}
+header footer .footerBottom .sns {
+  display: flex;
+  flex-basis: auto;
+}
+header footer .footerBottom .sns a {
+  vertical-align: bottom;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin-right: 9px;
+}
+header footer .footerBottom .sns a:first-of-type {
+  margin-left: 0;
+}
