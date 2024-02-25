@@ -1,4 +1,4 @@
-# OP.GG
+# OP.GG 클론
 
 [원본 사이트](https://www.op.gg/) <br/>
 [클론 사이트]()
