@@ -112,7 +112,8 @@ header .headerMenu .firstLine nav ul li a:hover {
   background-color: var(--route-hover-background-color);
   border-radius: 7px;
 }
-header .headerMenu .firstLine nav ul li > a > span {
+header .headerMenu .firstLine nav ul li > a > span,
+header .headerMenu .firstLine nav ul li > span > span {
   margin-left: 8px;
   font-size: 12px;
 }
@@ -120,10 +121,6 @@ header .headerMenu .firstLine nav ul li > span {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-header .headerMenu .firstLine nav ul li > span > span {
-  margin-left: 8px;
-  font-size: 12px;
 }
 header .headerMenu .firstLine nav ul li:first-child {
   padding: 0 12px 0 0;
@@ -167,8 +164,6 @@ header .headerMenu .rightMenu .language {
 header .headerMenu .loginMenu {
   width: 80px;
 }
-header .headerMenu .loginMenu .login {
-}
 header .headerMenu .loginMenu .login > a {
   display: block;
   padding: 4px 16px;
@@ -191,14 +186,11 @@ header .headerMenu .secondLine {
 header .headerMenu .secondLine .routeMenu {
   position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 1080px;
 }
 header .headerMenu .secondLine .routeMenu .routeList {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
 }
 header .headerMenu .secondLine .routeMenu .routeList .routeItem {
   margin-left: 24px;
@@ -223,6 +215,9 @@ header .headerMenu .secondLine .routeMenu .routeList .routeItem .home {
   box-sizing: border-box;
   line-height: 22px;
   padding: 10px 0 9px;
+}
+header .headerMenu .secondLine .routeMenu .routeList .routeItem .home:hover {
+  border: none;
 }
 header .headerMenu .secondLine .routeMenu .routeList .routeItem .champion,
 header .headerMenu .secondLine .routeMenu .routeList .routeItem .urf,
@@ -287,20 +282,20 @@ header .banner .thirdLine > a {
 header .banner .thirdLine > a:hover {
   text-decoration: underline;
 }
-header .main {
+main {
   display: block;
   width: 1080px;
   margin: 0 auto;
 }
-header .main .smallder {
+main .smallder {
   margin: 56px 0 46px;
 }
-header .main .smallder img {
+main .smallder img {
   display: block;
   max-height: 224px;
   margin: 0 auto;
 }
-header .main .middle {
+main .middle {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -309,10 +304,10 @@ header .main .middle {
   margin: 0 auto;
   text-align: center;
 }
-header .main .middle div:first-of-type {
+main .middle div:first-of-type {
   position: relative;
 }
-header .main .middle .searchBox {
+main .middle .searchBox {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.19);
   display: flex;
   align-items: center;
@@ -322,28 +317,28 @@ header .main .middle .searchBox {
   height: 60px;
   text-align: left;
 }
-header .main .middle .searchBox div {
+main .middle .searchBox div {
   position: relative;
   height: 20px;
 }
-header .main .middle .searchBox div:first-of-type {
+main .middle .searchBox div:first-of-type {
   padding-left: 32px;
   padding-right: 8px;
   margin-right: 16px;
 }
-header .main .middle .searchBox div small,
-header .main .middle .searchBox div .label {
+main .middle .searchBox div small,
+main .middle .searchBox div .label {
   display: block;
   font-size: 12px;
   line-height: 16px;
   color: #202d37;
   font-style: normal;
 }
-header .main .middle .searchBox .label {
+main .middle .searchBox .label {
   margin-bottom: 4px;
   font-weight: bold;
 }
-header .main .middle .searchBox .pickArea {
+main .middle .searchBox .pickArea {
   font-size: 12px;
   line-height: 16px;
   position: absolute;
@@ -351,7 +346,7 @@ header .main .middle .searchBox .pickArea {
   display: block;
   width: 194px;
 }
-header .main .middle .searchBox .pickArea::after {
+main .middle .searchBox .pickArea::after {
   position: absolute;
   content: "";
   top: 50%;
@@ -362,12 +357,12 @@ header .main .middle .searchBox .pickArea::after {
   border-top-color: #9aa4af;
   margin-top: -2.5px;
 }
-header .main .middle .searchBox .pickKr {
+main .middle .searchBox .pickKr {
   position: relative;
   display: block;
   width: 194px;
 }
-header .main .middle .searchBox .pickKr .korea {
+main .middle .searchBox .pickKr .korea {
   display: flex;
   position: relative;
   overflow: hidden;
@@ -381,7 +376,7 @@ header .main .middle .searchBox .pickKr .korea {
   border-radius: 4px;
   box-sizing: border-box;
 }
-header .main .middle .searchBox .pickKr .korea::after {
+main .middle .searchBox .pickKr .korea::after {
   position: absolute;
   content: "";
   top: 50%;
@@ -392,14 +387,14 @@ header .main .middle .searchBox .pickKr .korea::after {
   margin-top: -2.5px;
   border-top-color: #9aa4af;
 }
-header .main .middle .searchBox .pickKr .korea span {
+main .middle .searchBox .pickKr .korea span {
   font-size: 14px;
   line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-header .main .middle .searchBox > div:first-of-type::after {
+main .middle .searchBox > div:first-of-type::after {
   content: "";
   display: block;
   position: absolute;
@@ -410,14 +405,14 @@ header .main .middle .searchBox > div:first-of-type::after {
   height: 14px;
   background: #ebeef1;
 }
-header .main .middle .searchBox > div {
+main .middle .searchBox > div {
   position: relative;
   height: 40px;
 }
-header .main .middle .searchBox .searchWrapper {
+main .middle .searchBox .searchWrapper {
   flex: 1;
 }
-header .main .middle .searchBox .searchWrapper label + input {
+main .middle .searchBox .searchWrapper label + input {
   background: #fff;
   position: relative;
   border: 0;
@@ -427,7 +422,10 @@ header .main .middle .searchBox .searchWrapper label + input {
   line-height: 20px;
   color: #202d37;
 }
-header .main .middle .searchBox .searchWrapper .searchPlaceholder {
+main .middle .searchBox .searchWrapper input {
+  outline: none;
+}
+main .middle .searchBox .searchWrapper .searchPlaceholder {
   font-size: 14px;
   height: 20px;
   left: 0;
@@ -441,18 +439,15 @@ header .main .middle .searchBox .searchWrapper .searchPlaceholder {
   z-index: 1;
   line-height: 16px;
 }
-header
-  .main
-  .middle
-  .searchBox
-  .searchWrapper
-  .searchPlaceholder
-  .placeHoderTag {
+main .middle .searchBox .searchWrapper .searchPlaceholder:active {
+  display: none;
+}
+main .middle .searchBox .searchWrapper .searchPlaceholder .placeHoderTag {
   font-weight: 500;
   border-radius: 3px;
   background-color: #f7f7f9;
 }
-header .main .middle .searchBox button[type="submit"] {
+main .middle .searchBox button[type="submit"] {
   background-image: url(https://s-lol-web.op.gg/images/icon/icon-gg.svg);
   background-repeat: no-repeat;
   background-size: 42px;
@@ -461,13 +456,13 @@ header .main .middle .searchBox button[type="submit"] {
   height: 60px;
   font-size: 0;
 }
-header .main .middle .middleSecond {
+main .middle .middleSecond {
   width: 100%;
   height: 130px;
   display: flex;
   position: relative;
 }
-header .main .middle .middleSecond .middleSecondBanner {
+main .middle .middleSecond .middleSecondBanner {
   width: 600px;
   margin: 0 auto;
   border-radius: 10px;
@@ -475,7 +470,7 @@ header .main .middle .middleSecond .middleSecondBanner {
   background-size: auto;
   background-repeat: no-repeat;
 }
-header .middleThird .middleThirdBanner {
+main .middleThird .middleThirdBanner {
   width: 1080px;
   height: 270px;
   border-radius: 10px;
@@ -487,30 +482,30 @@ header .middleThird .middleThirdBanner {
   font-size: 90px;
   font-weight: 700;
 }
-header .middleThird .middleThirdBanner span img {
+main .middleThird .middleThirdBanner span img {
   width: 900px;
   height: 270px;
   border-radius: 20px;
 }
-header .middleTable {
+main .middleTable {
   display: flex;
   width: 1080px;
   margin: 36px auto 0px;
   box-sizing: border-box;
 }
-header .middleTable > :first-of-type {
+main .middleTable > :first-of-type {
   flex-basis: 536px;
   margin-right: 8px;
 }
-header .middleTable > section {
+main .middleTable > section {
   background-color: white;
   border-radius: 4px;
   min-height: 405px;
 }
-header .middleTable .opggTalk {
+main .middleTable .opggTalk {
   width: 100%;
 }
-header .middleTable .opggTalk h2 a {
+main .middleTable .opggTalk h2 a {
   display: block;
   padding: 17px 0px 16px 20px;
   text-decoration: none;
@@ -519,12 +514,12 @@ header .middleTable .opggTalk h2 a {
   line-height: 17px;
   font-size: 14px;
 }
-header .middleTable .opggTalk .opggTalkTopic {
+main .middleTable .opggTalk .opggTalkTopic {
   padding-bottom: 13px;
   display: flex;
   flex-flow: column;
 }
-header .middleTable .opggTalk > div {
+main .middleTable .opggTalk > div {
   margin: 0 20px;
   display: flex;
   border-bottom: 1px solid #d1d3d3;
@@ -532,52 +527,52 @@ header .middleTable .opggTalk > div {
   height: 100px;
   align-items: center;
 }
-header .middleTable .opggTalk > div:nth-child(6) {
+main .middleTable .opggTalk > div:nth-child(6) {
   border-bottom: none;
 }
-header .middleTable .opggTalk > div .numbering {
+main .middleTable .opggTalk > div .numbering {
   display: flex;
   justify-content: center;
   width: 40px;
   font-size: 20px;
   font-style: italic;
 }
-header .middleTable .opggTalk > div .topic {
+main .middleTable .opggTalk > div .topic {
   display: inline-block;
   margin-left: 20px;
 }
-header .middleTable .opggTalk > div span a {
+main .middleTable .opggTalk > div span a {
   text-decoration: none;
   color: #171818;
 }
-header .middleTable .opggTalk > div .saw {
+main .middleTable .opggTalk > div .saw {
   display: inline-block;
   color: #4171d6;
   padding-left: 4px;
   font-size: 13px;
 }
-header .middleTable .opggTalk > div .saw:hover {
+main .middleTable .opggTalk > div .saw:hover {
   cursor: pointer;
 }
-header .middleTable .playerTab {
+main .middleTable .playerTab {
   max-width: 536px;
   border-radius: 9px;
   background-color: var(--primary-background-color);
 }
-header .middleTable .playerTab div {
+main .middleTable .playerTab div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 256px 256px;
 }
-header .middleTable .playerTab div span {
+main .middleTable .playerTab div span {
   display: grid;
   justify-content: center;
   border: 1px solid var(--primary-background-color);
 }
-header .middleTable .playerTab div span img {
+main .middleTable .playerTab div span img {
   border-radius: 9px;
 }
-header .middleTable .playerTab .playerTabEnd {
+main .middleTable .playerTab .playerTabEnd {
   width: 532px;
   height: 50px;
   display: flex;
@@ -587,47 +582,47 @@ header .middleTable .playerTab .playerTabEnd {
   font-size: 30px;
   border-radius: 0 0 9px 9px;
 }
-header .middleTable .playerTab .white {
+main .middleTable .playerTab .white {
   color: white;
   padding-right: 10px;
 }
-header .middleTable .playerTab .black {
+main .middleTable .playerTab .black {
   color: white;
   padding-right: 10px;
 }
-header .middleTable .playerTab .orange {
+main .middleTable .playerTab .orange {
   color: orange;
 }
-header footer {
+footer {
   min-width: 1080px;
   margin-top: 48px;
   padding: 48px 0;
   background: transparent;
 }
-header footer > div {
+footer > div {
   width: 1080px;
   margin: 0 auto;
 }
-header footer > div section {
+footer > div section {
 }
-header footer > div section .footerLogo {
+footer > div section .footerLogo {
   margin-left: 0;
   flex-grow: 1;
 }
-header footer > div section .footerLogo a {
+footer > div section .footerLogo a {
   font-size: 14px;
 }
-header footer > div section div {
+footer > div section div {
   flex-basis: 170px;
   margin-left: 12px;
 }
-header footer > div section div .aTitle {
+footer > div section div .aTitle {
   font-weight: bold;
   font-size: 14px;
   color: white;
   padding-bottom: 16px;
 }
-header footer > div section div a {
+footer > div section div a {
   display: inline-block;
   width: 100%;
   line-height: 24px;
@@ -635,11 +630,10 @@ header footer > div section div a {
   color: white;
   font-size: 14px;
 }
-header footer .footerBottom {
+footer .footerBottom {
   margin-top: 24px;
   padding-top: 24px;
   border-top: 1px solid #dbe0e4;
-  justify-content: space-between;
   align-items: flex-start;
   gap: 16px;
   color: #fff;
@@ -647,47 +641,47 @@ header footer .footerBottom {
   line-height: 16px;
   display: flex;
 }
-header footer .footerBottom .footerBottonFirst {
+footer .footerBottom .footerBottonFirst {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-header footer .footerBottom .footerBottonFirst .company {
+footer .footerBottom .footerBottonFirst .company {
   display: flex;
   flex-wrap: wrap;
   gap: 2px 8px;
   margin: 0;
   padding: 0;
 }
-header footer .footerBottom .footerBottonFirst .company > li {
+footer .footerBottom .footerBottonFirst .company > li {
   position: relative;
   gap: 8px;
   display: flex;
   align-items: center;
 }
-header footer .footerBottom .footerBottonFirst .company > li::after {
+footer .footerBottom .footerBottonFirst .company > li::after {
   content: "";
   display: block;
   width: 1px;
   height: 12px;
   background: #81acff;
 }
-header footer .footerBottom .footerBottonFirst .copyright {
+footer .footerBottom .footerBottonFirst .copyright {
   font-size: 11px;
   font-weight: 500;
 }
-header footer .footerBottom .sns {
+footer .footerBottom .sns {
   display: flex;
   flex-basis: auto;
 }
-header footer .footerBottom .sns a {
+footer .footerBottom .sns a {
   vertical-align: bottom;
   width: 24px;
   height: 24px;
   display: inline-block;
   margin-right: 9px;
 }
-header footer .footerBottom .sns a:first-of-type {
+footer .footerBottom .sns a:first-of-type {
   margin-left: 0;
 }
