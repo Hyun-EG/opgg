@@ -7,8 +7,13 @@
 
 ## 선택요구사항
 
-[<header>,<section> 등 시멘틱 태그 활용]
-[CSS flex 활용]
+```html
+[
+<header>
+  ,
+  <section>등 시멘틱 태그 활용] [CSS flex 활용]</section>
+</header>
+```
 
 ## 오픈 그래프
 
