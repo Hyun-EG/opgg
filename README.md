@@ -8,7 +8,8 @@
 ![header](https://github.com/KDT1-FE/KDT8-M1/assets/106307387/61cf2d7c-9a39-418b-9bec-c673a7cbb213)
 
 ```html
-header라인을 클래스 firstLine,rightMenu,secondLine, thirdLine 나누었습니다.
+header
+라인을 클래스 firstLine,rightMenu,secondLine, thirdLine 나누었습니다.
 firstLine 좌측패딩을 로고 width만큼 주고 로고를 넣었습니다. 백그라운드 컬러를
 검정계열로 주고, li:first-child를 사용하여 배경컬러를 넣었으며 nav ul li태그를
 사용하여 정리하였습니다. hover를 줘서 포인터 효과를 주었습니다. secondLine
@@ -20,28 +21,29 @@ firstLine 좌측패딩을 로고 width만큼 주고 로고를 넣었습니다. �
 ![main](https://github.com/KDT1-FE/KDT8-M1/assets/106307387/1a37b815-364e-4484-bb8d-bf1d8c51b1a9)
 
 ```html
-검색창 위에있는 이미지는 스몰더라는 신규챔피온입니다. 클래스명 또한 스몰더로
-지정하였고, width값을 주고 마진을 0 auto를 줘서 정렬하였습니다. 클래스명
-middle에서는 flex-direction을 컬럼으로 줘서 아래방향으로 정렬하였습니다.
-searchBox 박스쉐도우를 주고, radius를 사용하여 박스를 꼭지점을 깎아줬습니다
-text-align을 left 줘서 검색과 지역을 좌측정렬하였습니다. searchWrapper에는
-flex:1을 줬습니다. input을 클릭했을때 검정테두리가 생겨서 outline:none을 줘서
-제거하였습니다. 밑에 배너는 middleSecondBanner , middleThirdBanner라고
+검색창 위에있는 이미지는 스몰더라는 신규챔피온입니다.
+클래스명 또한 스몰더로 지정하였고, width값을 주고 마진을 0 auto를 줘서 정렬하였습니다.
+클래스명 middle에서는 flex-direction을 컬럼으로 줘서 아래방향으로 정렬하였습니다.
+searchBox 박스쉐도우를 주고, radius를 사용하여 박스를 꼭지점을 깎아줬습니다.
+text-align을 left 줘서 검색과 지역을 좌측정렬하였습니다.
+searchWrapper에는 flex:1을 줬습니다. input을 클릭했을때 검정테두리가 생겨서
+outline:none을 줘서 제거하였습니다. 밑에 배너는 middleSecondBanner , middleThirdBanner라고
 클래스명을 만들었고, 광고부분이라서 이미지 삽입을 하였습니다. 광고밑에는 섹션을
-두개 만들었습니다. 기존사이트에는 그리드가 포함 돼있지 않아서, 좌측은 플렉스 ,
+두개 만들었습니다. 기존사이트에는 그리드가 포함 돼있지 않아서, 좌측은 플렉스,
 우측은 그리드를 조금씩 응용하여 바꿔봤습니다.
 ```
 
 ![footer](https://github.com/KDT1-FE/KDT8-M1/assets/106307387/fafc0222-faa8-4c44-869f-73553d68ad5c)
 
 ```html
-footer 로고를 좌측에 넣고 상단에 OP.GG Products Apps Resources More는 같은
-클래스로 묶어서 바꿔줬습니다. flex를 활용하여 정렬하고 각 a태그로
-만들어줬습니다. products와 apps에 글 우측 게임기모양은 이미지를 본사이트에서
-이미지를 불러왔습니다. footerBottom 부분은 먼저 border탑을 사용하여 선을
-그어주었고, flex를 활용하여 정렬하였습니다. ul li태그를 사용하여 정리하였고
-제일하단에 카피라이터 영어문단은 p태크를 사용하였습니다. sns는 본사이트에서
-이미지를 가져와 a태그안에 감싸서 넣어줬습니다.
+footer
+로고를 좌측에 넣고 상단에 OP.GG Products Apps Resources More는 같은 클래스로 묶어서 바꿔줬습니다.
+flex를 활용하여 정렬하고 각 a태그로 만들어줬습니다.
+products와 apps에 글 우측 게임기모양은 이미지를 본사이트에서 이미지를 불러왔습니다.
+footerBottom 부분은 먼저 border탑을 사용하여 선을 그어주었고,
+flex를 활용하여 정렬하였습니다. ul li태그를 사용하여 정리하였고
+제일하단에 카피라이터 영어문단은 p태크를 사용하였습니다.
+sns는 본사이트에서 이미지를 가져와 a태그안에 감싸서 넣어줬습니다.
 ```
 
 ## 오픈 그래프
@@ -66,7 +68,7 @@ footer 로고를 좌측에 넣고 상단에 OP.GG Products Apps Resources More�
 
 ## 트위터 카드
 
-````html
+```html
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:site" content="OPGG" />
 <meta
@@ -82,17 +84,23 @@ footer 로고를 좌측에 넣고 상단에 OP.GG Products Apps Resources More�
   content="https://s-lol-web.op.gg/images/icon/opgglogo.svg?v=1707283412529"
 />
 <meta property="twitter:url" content="https://www.op.gg/" />
+```
+
 
 ## Favicon
 
+```html
 <img
   src="https://s-lol-web.op.gg/images/icon/opgglogo.svg?v=1707283412529"
   width="65"
   height="16"
   alt="OP.GG"
 />
+```
 
-## Header ```html
+## Header
+```html
+
 <header>
     <div class="headerMenu">
       <div class="firstLine">
@@ -278,7 +286,7 @@ footer 로고를 좌측에 넣고 상단에 OP.GG Products Apps Resources More�
       </div>
   </header>
 ````
-
+      
 ## Main
 
 ```html
